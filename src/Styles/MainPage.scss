@@ -1,0 +1,21 @@
+@import '../Variables/Variables.scss';
+
+@mixin theme($theme: rgb(70, 70, 70)) {
+        background: $theme;
+        color: #fff;
+        height: 1000px;
+  }
+
+.mainPage{
+    @include theme;
+    display: flex;
+    justify-content: center;
+}
+
+@media only screen and (max-width: 600px) {
+    .mainPage h1{
+        @include theme($theme: #949494);
+        color: black;
+        padding: 0px 10px;
+    }
+}
